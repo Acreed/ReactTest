@@ -1,0 +1,370 @@
+/************************************************************************************
+*
+* General Style
+*
+/************************************************************************************/
+html {
+	height:100%;
+}
+
+body {
+	height: auto;
+	font-size:14px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+	font-family: 'Roboto', sans-serif;	
+}
+
+/************************************************************************************
+*
+* Google Nexus Menu
+*
+/************************************************************************************/
+
+html.cursor {
+	cursor: pointer;
+}
+
+nav {
+	font-family: 'Roboto', sans-serif;
+	width: 90%;
+	height: 59px;
+	border-bottom:1px solid #ddd;
+	position: fixed;
+	top:0;
+	left: 0px;
+	z-index: 0;
+	background-color:#ffffff;
+}
+
+	nav ul,
+	#sideNav ul,
+	#sideNav ul ul	{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	
+		nav li {
+			margin:0;
+			float:left;
+			border-right:1px solid #ddd;
+			font-size:18px;
+		}
+		
+		nav a,
+		#sideNav a {
+			color:#5b6064;
+			text-decoration:none;
+			display:block;
+			padding:10px 30px;
+			height:59px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			line-height:35px;
+		}
+		
+		nav a:hover,
+		#sideNav a:hover {
+			color:#ffffff;
+			background-color: #5b6064;
+		}	
+		
+	
+	#sideNav,
+	#sideNav.showHalfMenu,
+	#sideNav.showFullMenu,
+	#sideNav ul ul li,
+	#sideNav.showFullMenu ul ul li	 {
+		-webkit-transition: 0.2s ease;
+		-moz-transition: 0.2s ease;			
+		-ms-transition: 0.2s ease;						
+		transition: 0.2s ease;		
+	}
+	
+	#sideNav {
+		position: fixed;
+		left:-60px;
+		top:59px;
+		width: 60px;
+		height:100%;/* 		border-right:1px solid #ddd;						 */
+		background-color:#ffffff;
+		overflow-y: auto;	
+	}
+		#sideNav.showHalfMenu {
+			left: 0px;
+		}
+		
+		#sideNav.showFullMenu {
+			left: 0px;
+			width: 311px;		
+		}
+
+			#sideNav.showFullMenu ul ul li {
+				height:59px;				
+			}	
+	
+	
+		#sideNav > ul {
+			width: 100%;		
+			padding-bottom:60px;	
+		}
+	
+		#sideNav ul li {
+			width: 100%;
+			margin:0;		
+			font-weight:300;
+		}
+		
+		#sideNav ul li a {
+			border-bottom:1px solid #ddd;		
+			padding-left:70px;
+		}
+		
+		#sideNav ul li span {
+			position: relative;
+			top:3px;
+		}		
+		
+		#sideNav ul ul li {
+			overflow:hidden;
+			height: 0;				
+		}
+		
+		#sideNav input.search {
+			font-family: 'Roboto', sans-serif;			
+			border:0;
+			outline:0;
+			font-weight:300;
+			background:transparent;
+			color:#5b6064;			
+		}
+
+				
+		input.search::-webkit-input-placeholder {
+			color:#5b6064;		
+		}
+		input.search:-moz-placeholder {
+			color:#5b6064;		
+		}
+		input.search::-moz-placeholder {
+			color:#5b6064;		
+		}
+		input.search:-ms-input-placeholder {
+			color:#5b6064;
+		}
+		
+		#sideNav li.searchForm:hover input.search:focus,
+		#sideNav li.searchForm:hover input.search::-webkit-input-placeholder {
+			color:#fff;		
+		}		
+
+		#sideNav li.searchForm:hover input.search:-moz-placeholder {
+			color:#fff;		
+		}				
+		
+		#sideNav li.searchForm:hover input.search::-moz-placeholder {
+			color:#fff;		
+		}				
+
+
+/************************************************************************************
+*
+* Menu Icons
+*
+/************************************************************************************/		
+		
+	.icon {
+		background: transparent url('../img/icons.png') no-repeat 0 0;	
+	}
+	
+		.icon-menu {
+			text-indent:-99999em;
+			background-position: 0 0;
+		}
+		
+		.icon-menu:hover {
+			background-position: -59px 0;
+		}		
+		
+		.icon-menu.icon-menu-active {
+			background-position: -120px 0;
+			background-color:#fff;
+		}				
+		
+		.icon-search {
+			background-position: 0 -60px;
+		}
+		
+		.icon-search:hover {
+			background-position: -59px -60px;
+		}		
+		
+		.icon-home {
+			background-position: 0 -120px;
+		}
+		
+		.icon-home:hover {
+			background-position: -58px -120px;
+		}	
+		
+		.icon-articles {
+			background-position: 0 -180px;
+		}
+		
+		.icon-articles:hover {
+			background-position: -58px -180px;
+		}	
+		
+		.icon-social {
+			background-position: 0 -240px;
+		}
+		
+		.icon-social:hover {
+			background-position: -58px -240px;
+		}			
+		
+		
+/************************************************************************************
+*
+* Responsive
+*
+/************************************************************************************/		
+
+/*------------------------------------------------------------------*/ 
+/*	2) Note: Design for a width of 480 px
+/*------------------------------------------------------------------*/
+@media only screen and (min-width: 200px) and (max-width: 480px) {
+
+
+	nav a,
+	#sideNav a {
+		padding:10px 15px;
+	}	
+	
+	nav a#btn-menu {
+		padding:10px 30px;	
+	}
+
+	#sideNav.showFullMenu,
+	#sideNav.showFullMenu li,
+	#sideNav.showFullMenu	a	 {
+		width: 100%;
+	}    
+
+}
+
+body, html {
+          height: 100%;
+          margin: 0;
+          overflow:hidden;
+          font-family: helvetica;
+          font-weight: 100;
+      }
+      .container {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          right: 0;
+          -webkit-transition:  right 0.4s ease-in-out;
+          -moz-transition:  right 0.4s ease-in-out;
+          -ms-transition:  right 0.4s ease-in-out;
+          -o-transition:  right 0.4s ease-in-out;
+          transition:  right 0.4s ease-in-out;
+		z-index: 0;
+      }
+      .container.open-sidebar {
+          right: 240px;
+		z-index: 10;
+      }
+      
+      .swipe-area {
+          position: absolute;
+          width: 50px;
+          right: 0;
+      top: 0;
+          height: 100%;
+          background: #f3f3f3;
+          z-index: 0;
+      }
+      #sidebar {
+          background: #F5F5F5;
+          position: absolute;
+          width: 240px;
+          height: 100%;
+          right: -240px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+      }
+      #sidebar ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
+      #sidebar ul li {
+          margin: 0;
+      }
+      #sidebar ul li a {
+          padding: 15px 20px;
+          font-size: 16px;
+          font-weight: 100;
+          color: black;
+          text-decoration: none;
+          display: block;
+          border-bottom: 1px solid #E6E6FA;
+          -webkit-transition:  background 0.3s ease-in-out;
+          -moz-transition:  background 0.3s ease-in-out;
+          -ms-transition:  background 0.3s ease-in-out;
+          -o-transition:  background 0.3s ease-in-out;
+          transition:  background 0.3s ease-in-out;
+		z-index: 10;
+      }
+      #sidebar ul li:hover a {
+          background: #36303B;
+      }
+      .main-content {
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          position: relative;
+      }
+      .main-content .content{
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+      padding-left: 60px;
+      width: 100%;
+      }
+      .main-content .content h1{
+          font-weight: 100;
+      }
+      .main-content .content p{
+          width: 100%;
+          line-height: 160%;
+      }
+      .main-content #sidebar-toggle {
+          background: #36303B;
+          border-radius: 3px;
+          display: block;
+          position: relative;
+          padding: 10px 7px;
+          float: right;
+          z-index: 10;
+    	right: 0px;
+      }
+      .main-content #sidebar-toggle .bar{
+           display: block;
+          width: 18px;
+          margin-bottom: 3px;
+          height: 2px;
+          background-color: #fff;
+          border-radius: 1px;   
+      }
+      .main-content #sidebar-toggle .bar:last-child{
+           margin-bottom: 0;   
+      }
+
